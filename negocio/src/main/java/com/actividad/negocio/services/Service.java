@@ -5,6 +5,6 @@ import actividades.ejercicioDos.dao.*;
 
 public class Service {
 	
-	EjDao dao = new EjDao();
-	public List<Object> lista = dao.getAll("Cliente");
+	public EjDao dao = new EjDao();
+	public List<Object> listaArticulos = dao.getAll("Articulo");
 }
