@@ -53,7 +53,7 @@ public class Articulos extends JFrame {
 	 */
 	public Articulos() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 532, 520);
+		setBounds(100, 100, 539, 547);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.LIGHT_GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -85,8 +85,8 @@ public class Articulos extends JFrame {
 		JButton btnNewButton = new JButton("Mostrar todos");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Service Busqueda = new Service();
-				System.out.println(Busqueda.listaArticulos);
+				AllArticulos mostrarTodos= new AllArticulos();
+				mostrarTodos.setVisible(true);
 			}
 		});
 		btnNewButton.setBounds(372, 285, 111, 23);

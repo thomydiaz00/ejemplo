@@ -3,6 +3,9 @@ package com.actividad.negocio.interfaces;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GestionApp {
 
@@ -38,6 +41,17 @@ public class GestionApp {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JButton btnNewButton = new JButton("Gestion de Articulos");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Articulos art = new Articulos();
+				art.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(51, 67, 89, 23);
+		frame.getContentPane().add(btnNewButton);
 	}
 
 }
